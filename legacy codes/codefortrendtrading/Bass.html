@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bass Technologies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+ 
+<style>
+.intraday-strategy-label{
+color:black;
+font-size: 28px;
+FONT-WEIGHT: 640;
+}
+
+.table-header-contents{
+margin-top:50px;
+padding:0px 30px;
+}
+
+.table-content{
+padding:0px 30px;
+}
+
+.nav-link{
+color:white !important;
+}
+
+.nav-link:hover{
+background-color: #febd69;
+color:#343a40;
+}
+
+.dropdown-item{
+background-color:#343a40;
+color:white;
+border: 1px solid #e1e1e1;
+}
+
+
+.dropdown-item:hover{
+background-color: #febd69;
+color:white;
+}
+
+.dropdown-menu{
+padding:0px;
+color:white;
+}
+
+
+.table-hover tbody tr:hover {
+    color:#343a40;
+    background-color: #febd69;
+}
+</style>
+</head>
+
+
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top mb-5">
+  <!-- Brand -->
+  <a class="navbar-brand" href="Bass.html">Bass Technologies</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="https://pro.upstox.com/" target="_blank">Upstox</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" target="_blank" href="https://www1.nseindia.com/live_market/dynaContent/live_watch/equities_stock_watch.htm?cat=CME" target="_blank">Indices</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Timeframe
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#swing-header-contents">Swing Trading</a>
+        <a class="dropdown-item" href="#intraday-header-contents">Intraday Trading</a>
+        
+      </div>
+    </li>
+  </ul>
+</nav>
+<br>
+<br>
+
+
+
+
+<div class="container-fluid mt-5">
+
+
+<div class="table-header-contents" id="swing-header-contents">
+<div class="row">
+<div class = "col-lg-6 col-sm-6 col-md-6 col-6">
+<label class = "intraday-strategy-label">Swing Trend Trading Screener:</label>
+</div>
+
+<div class = "col-lg-6 col-sm-6 col-md-6 col-6">
+
+<input class="form-control"  id="mySwinginput" type="text" placeholder="Filter . .">
+
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class = "col-lg-12 col-sm-12 col-md-12 col-12">
+<div id = "swingcontents">
+</div>
+</div>
+</div>
+
+
+<div class="table-header-contents" id="intraday-header-contents">
+<div class="row">
+<div class = "col-lg-6 col-sm-6 col-md-6 col-6">
+<label class = "intraday-strategy-label">Intraday Trend Trading Screener:</label>
+</div>
+
+<div class = "col-lg-6 col-sm-6 col-md-6 col-6">
+
+<input class="form-control" name="name" id="myInput" type="text" placeholder="Filter . .">
+
+</form>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class = "col-lg-12 col-sm-12 col-md-12 col-12">
+<div id = "contents">
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+function loadlink(){
+    $('#contents').load('trendtable.php',function () {
+         $(this).unwrap();
+    });
+}
+
+loadlink(); // This will run on page load
+setInterval(function(){
+    loadlink() // this will run after every 30 seconds
+}, 300000);
+
+
+
+ // I have no idea what this function does but if i remove it the html table shrinks for the duration of the refresh when it's first loaded
+function loadlink2(){
+    $('#contents').load('trendtable.php',function () {
+         $(this).unwrap();
+    });
+}
+
+loadlink(); // This will run on page load
+setInterval(function(){
+    loadlink() // this will run after every 30 seconds
+}, 300000);
+
+
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable, #main").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+
+
+$(document).ready(function(){
+  $("#mySwinginput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myswingTable, #main").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+function loadSwinglink(){
+    $('#swingcontents').load('swingtrendtable.php',function () {
+         $(this).unwrap();
+    });
+}
+
+
+loadSwinglink(); // This will run on page load
+setInterval(function(){
+    loadSwinglink() // this will run after every 30 seconds
+}, 3000000);
+
+
+
+
+ // I have no idea what this function does but if i remove it the html table shrinks for the duration of the refresh when it's first loaded
+function loadSwinglink2(){
+    $('#swingcontents').load('swingtrendtable.php',function () {
+         $(this).unwrap();
+    });
+}
+
+loadSwinglink(); // This will run on page load
+setInterval(function(){
+    loadSwinglink() // this will run after every 30 seconds
+}, 3000000);
+
+
+</script>
+
+
+
+</body>
+</html>
