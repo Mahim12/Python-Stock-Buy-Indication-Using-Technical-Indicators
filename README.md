@@ -7,6 +7,8 @@ Introduction
 Hello there! 👋 Welcome to my GitHub repository. Here, I explore various aspects of investing and share my experience in developing a risk-tolerance-based investment framework. As a former retail trader, I used modeling techniques, engineering, and algorithms to build trading strategies.
 
 My Journey to Understanding Risk Tolerance
+
+
 Understanding one's risk tolerance is crucial for successful investing. I embarked on a personal journey to discover my risk tolerance by studying historical market data, analyzing my reactions to market fluctuations, and seeking advice from financial experts. Through this process, I gained valuable insights into my risk appetite and built an investment approach that aligns with my financial goals and temperament.
 
 
@@ -15,6 +17,8 @@ I spent the majority of my time coming up with strategies like Trend Trading, Me
 In the end I did make a fully automated system that told me when to buy a stock although the basis of it was all wrong(In my opinion Technical Analysis has no edge to it). I spent so much time thinking TA was right that I was biased from the get go.
 
 My Framework as a Former Retail Trader
+
+
 As a trader, my focus was on short-term to mid-term, low-cost investment strategies. I used a combination of Python, Pandas, and financial libraries like Pandas-Datareader and Yahoo Finance to collect historical market data and analyze various investment opportunities. The core principles of my trading framework include:
 
 Gap Trading Strategy: I leverage price gaps (open and former close) to identify potential buying or selling opportunities in certain market conditions.
@@ -26,6 +30,8 @@ Trend Trading Strategy: I use Heiken Ashi charts and trend analysis to identify 
 Lowest Point Strategy: This strategy involves identifying stocks that have reached their recent lowest points, using a combination of momentum and technical indicators.
 
 Key Python Libraries Utilized
+
+
 I utilize several powerful Python libraries to aid my research and analysis, including:
 
 Scipy
@@ -44,6 +50,8 @@ itertools
 Winsound (for sound notifications)
 
 Let's Collaborate and Innovate Together
+
+
 Feel free to explore the code in this repository and share your thoughts and suggestions. I'm always open to collaborations and discussions on investment strategies and trading algorithms. Let's combine our passion for technology to build cool projects together.
 
 📈 Happy Investing! 🚀
