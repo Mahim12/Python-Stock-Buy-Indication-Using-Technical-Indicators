@@ -3,12 +3,7 @@ Backend: Python
 
 Frontend: PHP
 
-Introduction
-
-Hello there! 👋 Welcome to my GitHub repository. Here, I explore various aspects of investing and share my experience in developing a risk-tolerance-based investment framework. As a former retail trader, I used modeling techniques, engineering, and algorithms to build trading strategies.
-
-My Journey to Understanding Risk Tolerance
-
+Introduction to my Journey to Understanding Risk Tolerance
 
 Understanding one's risk tolerance is crucial for successful investing. I embarked on a personal journey to discover my risk tolerance by studying historical market data, analyzing my reactions to market fluctuations, and seeking advice from financial experts. Through this process, I gained valuable insights into my risk appetite and built an investment approach that aligns with my financial goals and temperament.
 
