@@ -29,20 +29,33 @@ As a trader, my focus was on short-term to mid-term, low-cost investment strateg
 
 I utilize several powerful Python libraries to aid my research and analysis, including:
 
-**Scipy
-Pandas
-Matplotlib
-Pandas-Datareader
-YFinance
-MySQL Connector
-Talib
-Numpy
-BeautifulSoup
-Requests
-Csv
-Statistics
-itertools
-Winsound (for sound notifications)**
+**Scipy**
+
+**Pandas**
+
+**Matplotlib**
+
+**Pandas-Datareader**
+
+**YFinance**
+
+**MySQL Connector**
+
+**Talib**
+
+**Numpy**
+
+**BeautifulSoup**
+
+**Requests**
+
+**Csv**
+
+**Statistics**
+
+**itertools**
+
+**Winsound** (for sound notifications)
 
 **Let's Collaborate and Innovate Together**
 
